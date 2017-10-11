@@ -1,0 +1,51 @@
+<section class="col-md-3 col-lg3">
+    <h2>Students List</h2>
+    <h4>Search: </h4>
+    <span><input type="text" ng-model="StudentsSearchBy"><!-- --></input></span>
+    <span><button data-ng-click="getStudent()" class="btn btn-info">Refresh List</button></span>
+    <span><button data-ng-click="createStudent()" class="btn btn-primary">Create New</button></span>
+    <p ng-show="content" data-ng-bind="content"></p>
+    <aside class="students_ctr">
+        <div ng-repeat="student in students | filter:StudentsSearchBy" ng-include="'templates/Students/student-template.html'">
+
+        </div>
+    </aside>
+</section>
+<section class="col-md-3 col-lg3">
+    <h2>Courses List</h2>
+    <h4>Search: </h4>
+    <span><input type="text" ng-model="CoursesSearchBy"><!-- --></input></span>
+    <span><button data-ng-click="getCourse()" class="btn btn-info">Refresh List</button></span>
+    <span><button data-ng-click="createCourse()" class="btn btn-primary">Create New</button></span>
+    <p ng-show="content" data-ng-bind="content"></p>
+    <aside class="courses_ctr">
+        <div ng-repeat="course in courses | filter:CoursesSearchBy" ng-include="'templates/Courses/course-template.html'">
+
+        </div>
+    </aside>
+</section>
+
+<section class="col-md-6 col-lg-6 pull-right">
+    <aside class="edit-ctr" ng-switch="dinamic_display_state">
+        <div ng-switch-when="edit-student">
+            <div ng-include="'templates/Students/student-edit-template.html'"></div>
+        </div>
+        <div ng-switch-when="create-student">
+            <div ng-include="'templates/Students/student-Create-template.html'"></div>
+        </div>
+        <div ng-switch-when="delete-student">
+            <div ng-include="'templates/Students/student-delete-template.html'"></div>
+        </div>
+        <div ng-switch-when="edit-course">
+            <div ng-include="'templates/Courses/course-edit-template.html'"></div>
+        </div>
+        <div ng-switch-when="create-course">
+            <div ng-include="'templates/Courses/course-Create-template.html'"></div>
+        </div>
+        <div ng-switch-when="delete-course">
+            <div ng-include="'templates/Courses/course-delete-template.html'"></div>
+        </div>
+        <div ng-switch-default>
+        </div>
+    </aside>
+</section>

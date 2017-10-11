@@ -1,0 +1,22 @@
+<article class='create-course well'>
+
+    <lable class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Course Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='coursename' placeholder='Course Name' id='coursename' ng-model="CreatedCourse.coursename"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Description:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='description' placeholder='Description' id='description' ng-model="CreatedCourse.description"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Classroom:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='classroom' placeholder='Classroom' id='classroom' ng-model="CreatedCourse.classroom"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Duration:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='duration' placeholder='Duration' id='classroom' ng-model="CreatedCourse.duration"></span>
+    </lable>
+
+    <button class="btn btn-default" ng-click='submitCreatedCourse()'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

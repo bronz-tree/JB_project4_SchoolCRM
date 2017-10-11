@@ -1,0 +1,31 @@
+<article class='delete-existing-manager well' id="{{ DeletedManager._id }}">
+    <lable class="row">
+        <img class='pull-left profile_img' src="{{ DeleteManager.imagename }}"> <!-- upload image here-->
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.imagename}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">User Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.username}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Display Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.displayname}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.phone}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Email:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.email}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Role:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedManager.role}} </span>
+    </lable>
+    <button class="btn btn-default" ng-click='submitDeletedManager(DeletedManager)'>Delete Forever</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

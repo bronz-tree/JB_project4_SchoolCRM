@@ -1,0 +1,43 @@
+
+<article class='edit-existing-manager well' id="{{ EditManager._id }}">
+    <lable class="row">
+        <img class='profile_img' src="{{ EditManager.imagename }}">  <!-- upload image here-->
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='file' name='ManagerImage' id='ManagerImage' ng-model='EditManager.imagename'></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">User Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='managername' placeholder='User Name' id='managername' ng-model="EditManager.username"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">New Password:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='password' placeholder='New Password' id='password' ng-model="EditManager.password"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Display Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Display Name' id='displayname' ng-model="EditManager.displayname"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Phone' id='phone' ng-model="EditManager.phone"></span>
+        </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Email:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='email' name='email:' placeholder='Email' id='email' ng-model="EditManager.email"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Role:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='role:' placeholder='Role' id='role' ng-model="EditManager.role"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Authorization:</span>
+        <span class="col-md-6 col-lg-6 pull-left">
+            <input type="radio" ng-model="EditManager.Authorization" value="sales">Sales
+            <input type="radio" ng-model="EditManager.Authorization" value="manager">Manager
+        </span>
+    </lable>
+    <button class="btn btn-default" ng-click='submitEditedManager()'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

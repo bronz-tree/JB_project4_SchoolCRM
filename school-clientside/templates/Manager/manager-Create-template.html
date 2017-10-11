@@ -1,0 +1,40 @@
+
+<article class='create-manager well' id="{{ CreatedManager._id }}">
+    <lable class="row">
+        <img class='pull-left profile_img' src="{{ CreatedManager.imagename }}">  <!-- upload image here-->
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='file' name='ManagerImage' id='ManagerImage' ng-model='CreatedManager.imagename'></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">User Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='managername' placeholder='User Name' id='managername' ng-model="CreatedManager.username"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Display Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Display Name' id='displayname' ng-model="CreatedManager.displayname"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Phone' id='phone' ng-model="CreatedManager.phone"></span>
+        </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Email:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='email' name='email:' placeholder='Email' id='email' ng-model="CreatedManager.email"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Role:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='role:' placeholder='Role' id='role' ng-model="CreatedManager.role"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Authorization:</span>
+        <span class="col-md-6 col-lg-6 pull-left">
+            <input type="radio" ng-model="CreatedManager.Authorization" value="sales">Sales
+            <input type="radio" ng-model="CreatedManager.Authorization" value="manager">Manager
+        </span>
+    </lable>
+    <br>
+    <button class="btn btn-default" ng-click='submitCreatedManager()'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

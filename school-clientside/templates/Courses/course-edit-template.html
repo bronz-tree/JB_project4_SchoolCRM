@@ -1,0 +1,39 @@
+
+<article class='edit-existing-course well' id="{{ EditCourse._id }}">
+
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Course Name:</span>
+        <span class="col-md-6 col-lg-6"><input type='text' name='coursename' placeholder='Course Name' id='coursename' ng-model="EditCourse.coursename"></span>
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Description:</span>
+        <span class="col-md-6 col-lg-6"><input type='text' name='description' placeholder='Description' id='description' ng-model="EditCourse.description"></span>
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Classroom:</span>
+        <span class="col-md-6 col-lg-6"><input type='text' name='classroom' placeholder='Classroom' id='classroom' ng-model="EditCourse.classroom"></span>
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Duration:</span>
+        <span class="col-md-6 col-lg-6"><input type='text' name='duration' placeholder='Duration' id='duration' ng-model="EditCourse.duration"></span>
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Filter students: </span>
+        <span class="col-md-6 col-lg-6"><input type="text" ng-model="EditCoursesFilterBy"></span>
+    </label>
+    <br>
+    <label>
+    <span ng-repeat="student in EditCourse.studentchecked | filter:EditCoursesFilterBy" col-md-2 col-lg-2>
+        <input id="{{ student._id }}" type="checkbox" ng-checked="student.checked" ng-click="togglestudent(student._id)">{{ student.studentname }}
+    </span>
+    </label>
+    <br>
+    <label class="row col-md-11 col-lg-11">
+        <button class="btn btn-default" ng-click='submitEditedCourse()'>Submit Changes</button>
+        <h4 ng-show="content" data-ng-bind="content"></h4>
+    </label>
+</article>

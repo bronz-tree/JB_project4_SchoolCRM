@@ -1,0 +1,23 @@
+<article class='delete-existing-student well' id="{{ DeletedStudent._id }}">
+    <lable class="row">
+        <img class='pull-left profile_img' src="{{ DeletedStudent.imagename }}"> <!-- upload image here-->
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{ DeletedStudent.imagename }} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">User Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{ DeletedStudent.studentname }} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedStudent.phone}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Email:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedStudent.email}} </span>
+    </lable>
+    <button class="btn btn-default" ng-click='submitDeletedStudent(DeletedStudent)'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

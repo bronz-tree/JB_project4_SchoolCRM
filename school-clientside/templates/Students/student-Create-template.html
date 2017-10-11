@@ -1,0 +1,24 @@
+
+<article class='create-student well' id="{{ CreatedStudent._id }}">
+    <lable class="row">
+        <img class='pull-left profile_img' src="{{ CreatedStudent.imagename }}">  <!-- upload image here-->
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Upload Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='file' name='StudentImage' id='StudentImage' ng-model='CreatedStudent.imagename'></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Student Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='managername' placeholder='Student Name' id='studentname' ng-model="CreatedStudent.username"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Phone' id='phone' ng-model="CreatedStudent.phone"></span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Email:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='email' name='email:' placeholder='Email' id='email' ng-model="CreatedStudent.email"></span>
+    </lable>
+    <button class="btn btn-default" ng-click='submitCreatedStudent()'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

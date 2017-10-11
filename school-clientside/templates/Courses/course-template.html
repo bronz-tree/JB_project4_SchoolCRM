@@ -1,0 +1,16 @@
+
+<article class='course-ctr' id="{{ course._id }}">
+    <div class="row">
+        <button class="btn btn-primary pull-right col-md-5 col-lg-5" data-ng-click="editCourse( course )">Edit</button>
+    </div>
+    <div class="row">
+        <button class="btn btn-danger pull-right col-md-5 col-lg-5" data-ng-click="deleteCourse( course )">Delete</button>
+    </div>
+    <div class='course-details'>
+        <p class='pull-left'>Course Name:  {{ course.coursename }}</p>
+        <p class='pull-left'>Course description:  {{ course.description }}</p>
+        <p class='pull-left'>classroom: {{ course.classroom }}</p>
+        <p class='pull-left'>course duration:  {{ course.duration }}</p>
+        <p class='pull-left'>date created: <span>{{ course.datecreated }}</span></p>
+    </div>
+</article>

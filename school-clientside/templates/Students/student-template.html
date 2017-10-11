@@ -1,0 +1,14 @@
+
+<article class='student-ctr' id="{{ student._id }}">
+    <div class="row">
+        <img class='pull-left profile_img' src="{{ student.imagename }}">
+        <button class="btn btn-primary pull-right col-md-5 col-lg-5" data-ng-click="editStudent( student )">Edit</button>
+        <button class="btn btn-danger pull-right col-md-5 col-lg-5" data-ng-click="deleteStudent( student )">Delete</button>
+    </div>
+    <div class='student-details col-md-12 col-lg-12'>
+        <p class='row pull-left'>student Name:  {{ student.studentname }}</p>
+        <p class='row pull-left'>phone: {{ student.phone}}</p>
+        <p class='row pull-left'>email: {{ student.email}}</p>
+        <p class='row pull-left'>courses:  {{ student.coursesname}}</p>
+    </div>
+</article>

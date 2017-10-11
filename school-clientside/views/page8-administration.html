@@ -1,0 +1,28 @@
+<section class="col-md-3 col-lg3">
+    <h2>Managers List</h2>
+    <h4>Search: </h4>
+    <span><input type="text" ng-model="searchBy"><!-- --></input></span>
+    <span><button data-ng-click="getManager()" class="btn btn-info">Refresh List</button></span>
+    <span><button data-ng-click="createManager()" class="btn btn-primary">Create New</button></span>
+    <p ng-show="content" data-ng-bind="content"></p>
+    <aside class="managers_ctr">
+            <div ng-repeat="manager in managers | filter:searchBy" ng-include="'templates/Manager/manager-template.html'">
+
+            </div>
+    </aside>
+</section>
+<section class="col-md-5 col-lg-5 pull-right">
+    <aside class="edit-ctr" ng-switch="dinamic_display_state">
+        <div ng-switch-when="edit-manager">
+            <div ng-include="'templates/Manager/manager-edit-template.html'"></div>
+        </div>
+        <div ng-switch-when="create-manager">
+            <div ng-include="'templates/Manager/manager-create-template.html'"></div>
+        </div>
+        <div ng-switch-when="delete-manager">
+            <div ng-include="'templates/Manager/manager-delete-template.html'"></div>
+        </div>
+        <div ng-switch-default>
+        </div>
+    </aside>
+</section>

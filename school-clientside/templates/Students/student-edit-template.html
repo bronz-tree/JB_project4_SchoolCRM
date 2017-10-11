@@ -1,0 +1,45 @@
+<article class='edit-existing-student well' id="{{ EditStudent._id }}">
+    <label class="row">
+        <img class='pull-left profile_img' ng-src="{{ EditStudent.imagename }}" alt=""> <!-- upload image here-->
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Image: </span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='file' name='StudentImage' id='StudentImage'
+                                                         ng-model="EditStudent.imagename"></span>
+    </label>
+    <label class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Student Name:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='studentname' placeholder='student Name'
+                                                         id='studentname' ng-model="EditStudent.studentname"></span>
+    </label>
+    <br>
+
+    <label class="row">
+        <span class="col-md-5 col-lg-5 pull-left">Phone:</span>
+        <span class="col-md-6 col-lg-6 pull-left"><input type='text' name='displayname:' placeholder='Phone' id='phone'
+                                                         ng-model="EditStudent.phone"></span>
+    </label>
+    <br>
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Email:</span>
+        <span class="col-md-6 col-lg-6"><input type='email' name='email:' placeholder='Email' id='email'
+                                               ng-model="EditStudent.email"></span>
+    </label>
+    <br>
+
+    <label class="row">
+        <span class="col-md-5 col-lg-5">Filter courses: </span>
+        <span class="col-md-6 col-lg-6"><input type="text" ng-model="EditStudentFilterBy"></span>
+    </label>
+    <br>
+    <label>
+    <span ng-repeat="course in EditStudent.coursechecked | filter:EditStudentFilterBy" col-md-2 col-lg-2>
+        <input id="{{ course._id }}" type="checkbox" ng-checked="course.checked" ng-click="togglecourse(course._id)">{{ course.coursename }}
+    </span>
+    </label>
+    <br>
+    <button class="btn btn-default" ng-click='submitEditedStudent()'>Submit Changes</button>
+    <button class="btn btn-default" ng-click='test()'>TEST</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

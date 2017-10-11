@@ -1,0 +1,15 @@
+
+<article class='manager-ctr' id="{{ manager._id }}">
+    <div class="row">
+        <img class='pull-left col-md-6 col-lg-6 profile_img' src="{{ manager.imagename }}">
+        <button class="btn btn-primary pull-left col-md-5 col-lg-5" data-ng-click="editManager( manager )">Edit</button>
+        <button class="btn btn-danger pull-left col-md-5 col-lg-5" data-ng-click="deleteManager( manager )">Delete</button>
+    </div>
+    <div class='manager-details'>
+        <p class='pull-left'>User Name:  {{ manager.username }}</p>
+        <p class='pull-left'>display Name:  {{ manager.displayname }}</p>
+        <p class='pull-left'>phone: {{ manager.phone}}</p>
+        <p class='pull-left'>email: {{ manager.email}}</p>
+        <p class='pull-left'>role:  {{ manager.role}}</p>
+    </div>
+</article>

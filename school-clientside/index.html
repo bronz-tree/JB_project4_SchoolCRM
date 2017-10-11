@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>school</title>
+
+    <!-- css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- load angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <!-- load angular route -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+    <!-- load bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- load bootstrap UI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+
+</head>
+<body>
+
+<main ng-app="schoolApp">
+
+    <!-- Navigation -->
+    <nav id="page-top" class="navbar navbar-default navbar-fixed-top navbar-shrink">
+        <div class="container" ng-controller="nav-bar-controller">
+            <div class="navbar-header page-scroll">
+                <a class="navbar-brand page-scroll" href="#/">School Project</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="">
+                    <a class="btn btn-info" ng-show="!displayShowLogout" href="#/login">Login</a>
+                </li>
+                <li class="">
+                    <a class="btn btn-info" href="#/School">School</a>
+                </li>
+                <li class="">
+                    <a class="btn btn-info" ng-show="displayShowManagers" href="#/Administration">Administration</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                    <button type="button" class="btn btn-info">Hello {{displayName}}</button>
+                    <button class="btn btn-danger" ng-show="displayShowLogout" ng-click="Logout()">Logout</button>
+                </li>
+            </ul>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+                    <div ng-view></div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="JS/app.js"></script>
+
+<script src="JS/controllers/page1-login-controller.js"></script>
+<script src="JS/controllers/page2-mail-insert-controller.js"></script>
+<script src="JS/controllers/page3-confirmation.js"></script>
+<script src="JS/controllers/page7-School-controller.js"></script>
+<script src="JS/controllers/page8-admnistration-controller.js"></script>
+<script src="JS/controllers/nav-bar-controller.js"></script>
+
+
+</body>
+</html>

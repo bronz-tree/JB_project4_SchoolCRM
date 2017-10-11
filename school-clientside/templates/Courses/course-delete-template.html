@@ -1,0 +1,24 @@
+<article class='delete-existing-course well' id="{{ DeletedCourse._id }}">
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Course Name: </span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedCourse.coursename}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Description:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedCourse.description}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Classroom:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedCourse.classroom}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Duration:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedCourse.duration}} </span>
+    </lable>
+    <lable class="row">
+        <span class="col-md-5 col-lg-5">Date created:</span>
+        <span class="col-md-6 col-lg-6 pull-left"> {{DeletedCourse.datecreated}} </span>
+    </lable>
+    <button class="btn btn-default" ng-click='submitDeletedCourse (DeletedCourse)'>Submit Changes</button>
+    <h4 ng-show="content" data-ng-bind="content"></h4>
+</article>

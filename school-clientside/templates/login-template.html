@@ -1,0 +1,36 @@
+
+<div class="row">
+    <div class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+        <form class="form-horizontal" role="form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>LOGIN PAGE</legend>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-xs-3 col-lg-3 control-label" for="Name">User Name:</label>
+                    <div class="col-sm-9 col-md-9 col-xs-9 col-lg-9">
+                        <input type="text" placeholder="Name" class="form-control" ng-model='LoginUserName'>
+                        <span ng-show="LoginForm.LoginUserName.$invalid">Invalid user name</span>
+                        <span ng-show="LoginForm.LoginUserName.$invalid">Invalid user name</span>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-sm-3 col-md-3 col-xs-3 col-lg-3 control-label" for="Phone">Password:</label>
+                    <div class="col-sm-9 col-md-9 col-xs-9 col-lg-9">
+                        <input type="text" placeholder="Password" class="form-control" ng-model='LoginUserpassword'>
+                    </div>
+                </div>
+
+                <a href="#/forgotPassword">Gee golly - i forgot the password</a>
+                <button class="btn btn-primary" ng-click='submitLogIn()'>submit</button>
+                <br>
+                <h4 ng-show="content" data-ng-bind="content"></h4>
+            </fieldset>
+        </form>
+    </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
+
